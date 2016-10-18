@@ -1,0 +1,6 @@
+ private void button1_Click(object sender, EventArgs e)
+        {
+            String userInput = Console.ReadLine();
+            String printServer = "\\NVPADMPRT01\"";
+            PowerShell addPrinter = PowerShell.Create().AddCommand("(New - Object - ComObject WScript.Network).AddWindowsPrinterConnection({0}{1})", printServer, userInput);
+        }
